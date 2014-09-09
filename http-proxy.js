@@ -1,17 +1,21 @@
 var http = require('http'),
+	url = require('url'),
 	httpProxy = require('http-proxy'),
-	connect = require('connect'),
 	log = require('./log'),
 	config = require('./config');
 
-var proxy = httpProxy.createServer({
 
-});
 
-connect.createServer(
+http.createServer(function(req, res) {
+	var url = req.url;
 
-).listen(config.proxyServer_port);
-
-http.createServer(
-
-).listen(config.server_port);
+	var parsedUrl = url.parse(url);
+	var proxy = httpProxy.createServer({
+		target: {
+			host: parsedUrl.hostname,
+			port: parsedUrl.port || 80
+		}
+	});
+	proxy.proxyRequest(req, res);
+	
+}).listen(config.server_port);
