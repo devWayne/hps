@@ -7,7 +7,7 @@ var http = require('http'),
 	utils=require('./utils'),
 	config = require('./config');
 
-
+utils.watchFile(config);
 
 http.createServer(function(req, res) {
 	var url = req.url;

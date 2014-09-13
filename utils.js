@@ -1,9 +1,27 @@
-var Path = require('path');
+var path = require('path'),
+	log=require('./log'),
+	watchr=require('watchr');	
+	
 function setResponse(response, contentType, buffer) {
 	response.setHeader('Content-Type', contentType);
 	response.setHeader('Access-Control-Allow-Origin', '*');
 	response.write(buffer);
 	response.end();
+}
+
+function watchFile(filePath){
+	watchr.watch({
+		paths:[filePath],
+		listeners:{
+			error:function(err){
+				log.error('[watch]',err);
+			},
+			change:function(){
+				delete require.cache[filePath];
+				log.info('[watch] reload config:'+filePath);
+			}
+		}
+	})
 }
 
 function rewrite(map, url) {
@@ -23,10 +41,11 @@ function rewrite(map, url) {
 		if (index === 0) {
 			var suffix = url.substr(index + from.length);
 			suffix = suffix.replace(/[?#].*$/, '');
-			return Path.resolve(to + suffix);
+			return path.resolve(to + suffix);
 		}
 	}
 	return url;
 }
 exports.rewrite=rewrite;
 exports.setResponse = setResponse;
+exports.watchFile=watchFile;
