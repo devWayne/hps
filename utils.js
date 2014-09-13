@@ -21,7 +21,7 @@ function watchFile(filePath){
 				log.info('[watch] reload config:'+filePath);
 			}
 		}
-	})
+	});
 }
 
 function rewrite(map, url) {

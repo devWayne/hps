@@ -10,8 +10,8 @@ var http = require('http'),
 utils.watchFile(config);
 
 http.createServer(function(req, res) {
-	var url = req.url;
-	var from = url;
+	var reqUrl = req.url;
+	var from = reqUrl;
 	var map=config.map;
 	if (from){
 		log.info('[get]'+from);
@@ -27,7 +27,7 @@ http.createServer(function(req, res) {
 			return;
 		}
 	}
-	var parsedUrl = url.parse(url);
+	var parsedUrl = url.parse(reqUrl);
 	var proxy = httpProxy.createServer({
 		target: {
 			host: parsedUrl.hostname,
@@ -36,6 +36,6 @@ http.createServer(function(req, res) {
 	});
 	proxy.proxyRequest(req, res);
 	
-}).listen(8000,function(){
-	console.log('Rewrite Server runing at port: ' + 8000);
+}).listen(config.port,function(){
+	console.log('Rewrite Server runing at port: ' + config.port);
 });
