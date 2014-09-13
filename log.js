@@ -6,16 +6,19 @@ var TYPE = {
 }
 var log = {
 	print: function(msgType, msg) {
-		swtich(msgType) {
+		switch(msgType){
 			case TYPE.Error:
 				console.log('\033[31m[ERROR]' + msg + '\033[0m');
 				break;
 			case TYPE.Warn:
 				console.log('\033[1;33m[WARN]' + msg + '\033[0m');
+				break;
 			case TYPE.INfo:
 				console.log('\033[36m[INFO]' + msg + '\033[0m');
+				break;
 			case TYPE.Debug:
 				console.log('\033[1;32m[DEBUG]' + msg + '\033[0m');
+				break;
 		}
 	},
 
@@ -35,4 +38,8 @@ var log = {
 		log.print(TYPE.Debug,msg);
 	}
 }
-exports.log = log;
+     exports.print = log.print;
+     exports.error = log.error;
+     exports.warn = log.warn;
+     exports.info = log.info;
+     exports.debug = log.debug;

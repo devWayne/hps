@@ -1,3 +1,4 @@
+var Path = require('path');
 function setResponse(response, contentType, buffer) {
 	response.setHeader('Content-Type', contentType);
 	response.setHeader('Access-Control-Allow-Origin', '*');
@@ -27,5 +28,5 @@ function rewrite(map, url) {
 	}
 	return url;
 }
-
+exports.rewrite=rewrite;
 exports.setResponse = setResponse;
