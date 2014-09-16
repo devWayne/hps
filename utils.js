@@ -33,6 +33,7 @@ function rewrite(map, url) {
 			continue;
 		}
 
+		
 		var from = row[0];
 		var to = row[1];
 
