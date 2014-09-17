@@ -2,11 +2,11 @@
   "name": "hps",
   "description": "http proxy server",
   "version": "0.2.0",
-  "author": "VI Wayne",
+  "author": "VI",
   "repository": {
     "url": "https://github.com/devWayne/hps.git"
   },
-  "bin": "lib/index.js",
+  "bin": "bin/index.js",
   "dependencies": {
     "http-proxy":"1.4.3",
     "commander": "2.3.0",

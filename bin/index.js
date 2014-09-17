@@ -3,8 +3,7 @@
 var program = require('commander'),
 	path = require('path'),
 	pkg = require('../package.json'),
-	config = require('../config'),
-	sv = require('../main');
+	sv = require('../lib/main');
 program
 	.version(pkg.version)
 
