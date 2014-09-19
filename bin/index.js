@@ -12,8 +12,7 @@ program
 	.description('start webapp server')
 	.action(function(proxyConfig) {
 		configPath = path.resolve(proxyConfig);
-		_config = require(configPath);
-		sv.main(_config);
+		sv.main(configPath);
 	});
 
 program.parse(process.argv);

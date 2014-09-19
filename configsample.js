@@ -1,5 +1,3 @@
-var port=7000;
 exports.map=[
-	['','']
+	['from-url','to-url']
 ];
-exports.port=port;
