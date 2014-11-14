@@ -42,3 +42,8 @@ thumbs.db
 node_modules
 old/
 reference/
+
+
+
+*.swp
+.DS_Store

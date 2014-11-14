@@ -1,7 +1,7 @@
 {
   "name": "hps",
   "description": "http proxy server",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "author": "VI",
   "repository": {
     "url": "https://github.com/devWayne/hps.git"

@@ -1,3 +1,5 @@
+exports.port=7000;
+
 exports.map=[
-	['from-url','to-url']
+	['fromUrl.js','toUrl.js']
 ];
