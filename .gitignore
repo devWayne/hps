@@ -47,3 +47,4 @@ reference/
 
 *.swp
 .DS_Store
+config.js

@@ -14,3 +14,9 @@
 ##Api
 
 ##Todo
+
+- compatiable with HTTPS request
+
+- add regExp support
+
+- add test case
