@@ -1,6 +1,5 @@
 [![Build Status](https://travis-ci.org/devWayne/claws.svg?branch=master)](https://travis-ci.org/devWayne/claws)
-
-#Http Proxy Server
+[![NPM](https://nodei.co/npm/hps.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/hps/)#Http Proxy Server
 
 ##Usage
 
@@ -8,7 +7,7 @@
 
 - step2. write a config file as the configsample.js
 
-- step3. run hps start <path>(<path> is the config path in step2)
+- step3. run hps start config-path(config-path is the config path in step2)
 
 
 ##Api
