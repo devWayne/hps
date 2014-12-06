@@ -1,7 +1,7 @@
 #Http Proxy Server
 
-[![Build Status](https://travis-ci.org/devWayne/claws.svg?branch=master)](https://travis-ci.org/devWayne/claws)
-[![NPM](https://nodei.co/npm/hps.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/hps/)#
+[![Build Status](https://travis-ci.org/devWayne/claws.svg?branch=master)](https://travis-ci.org/devWayne/claws)  
+[![NPM](https://nodei.co/npm/hps.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/hps/)
 
 
 ##Usage
