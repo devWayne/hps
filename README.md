@@ -1,14 +1,9 @@
 #Http Proxy Server
-<<<<<<< HEAD
-> Fast HTTP proxy tool      
+
+> Fast HTTP proxy tool   
+   
 [![Build Status](https://travis-ci.org/devWayne/claws.svg?branch=master)](https://travis-ci.org/devWayne/claws)
 [![NPM](https://nodei.co/npm/hps.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/hps/)#
-=======
-
-[![Build Status](https://travis-ci.org/devWayne/claws.svg?branch=master)](https://travis-ci.org/devWayne/claws)  
-[![NPM](https://nodei.co/npm/hps.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/hps/)
->>>>>>> 055eb83e9302c0b19f26c0e0d78e91d93c26d050
-
 
 ##Usage
 
