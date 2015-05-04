@@ -7,9 +7,41 @@
 
 ##Usage
 
-- step1. npm install -g hps
 
-- step2. write a config file as the configsample.js
+#### Global install hps
 
-- step3. run hps start config-path(config-path is the config path in step2)
+```shell
+$ npm install -g hps
+
+``` 
+
+#### Write the config file
+
+Write and save the config file
+
+```javasciprt
+//proxy port
+exports.port=7000;
+
+//proxy path
+exports.map=[
+	['url','local file path']
+];
+
+```
+
+#### Run Browser proxy
+
+Use `SwitchtSharp` to run browser proxy
+
+
+#### Run hps
+
+`./config.js` is your config file path
+
+```javasciprt
+
+$ hps start ./config.js
+
+```
 
